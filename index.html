@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 2: Hàng Hóa & Thị Trường</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo">KTCT / CHƯƠNG 2</span>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-nav">Trang chủ</a></li>
+                <li><a href="hang-hoa.html">Hàng Hóa</a></li>
+                <li><a href="tien-te.html">Tiền Tệ</a></li>
+                <li><a href="dich-vu.html">Dịch Vụ</a></li>
+                <li><a href="quiz.html">Kiểm Tra</a></li>
+                <li><a href="tien-te-gallery.html">Bộ Sưu Tập Tiền Tệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <canvas id="particle-canvas"></canvas> <div class="hero-content">
+            <h1>Chương 2: Hàng Hóa & Thị Trường</h1>
+            <p>Khám phá lý luận của C. Mác về các khái niệm nền tảng của kinh tế chính trị.</p>
+        </div>
+    </header>
+
+    <main class="portal-container">
+        <div class="container">
+            <h2 class="portal-title">Nội dung chi tiết</h2>
+            <div class="card-grid">
+                
+                <a href="hang-hoa.html" class="nav-card animate-on-scroll">
+                    <div class="card-icon"><i class="fas fa-boxes-stacked"></i></div>
+                    <h3>Hàng Hóa & Lao Động</h3>
+                    <p>Đi sâu vào 2 thuộc tính, tính 2 mặt của lao động, và các yếu tố ảnh hưởng đến lượng giá trị.</p>
+                </a>
+                
+                <a href="tien-te.html" class="nav-card animate-on-scroll delay-1">
+                    <div class="card-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Tiền Tệ</h3>
+                    <p>Tìm hiểu lịch sử ra đời qua 4 hình thái giá trị và 5 chức năng cơ bản của tiền tệ.</p>
+                </a>
+                
+                <a href="dich-vu.html" class="nav-card animate-on-scroll delay-2">
+                    <div class="card-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>Dịch Vụ & Yếu Tố Đặc Biệt</h3>
+                    <p>Khám phá các hình thái trao đổi hiện đại: dịch vụ, thương hiệu, "tư bản giả"...</p>
+                </a>
+                
+                <a href="tien-te-gallery.html" class="nav-card gallery-card animate-on-scroll delay-4">
+                    <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>Bộ Sưu Tập Tiền Tệ Thế Giới</h3>
+                    <p>Khám phá các loại tiền tệ tiêu biểu của từng khu vực — biểu tượng cho văn hóa, giá trị và sức mạnh kinh tế của các quốc gia.</p>
+                </a>
+                
+                <a href="quiz.html" class="nav-card quiz-card animate-on-scroll delay-3">
+                    <div class="card-icon"><i class="fas fa-clipboard-question"></i></div>
+                    <h3>Bài Kiểm Tra</h3>
+                    <p>Ôn tập và kiểm tra lại toàn bộ kiến thức bạn vừa học qua 10 câu hỏi trắc nghiệm.</p>
+                </a>                
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Website học tập môn Kinh tế Chính trị - Thiết kế bởi Gemini</p>
+    </footer>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Marxist-Leninist_Philosophy"
+  agent-id="f3dbda3d-5cd7-4713-86a0-753b8d7d53fc"
+  language-code="vi"
+></df-messenger>
+    <script src="js/main.js"></script>
+</body>
+</html>

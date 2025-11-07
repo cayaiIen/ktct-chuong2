@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Trắc Nghiệm - Chương 2</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo">KTCT / CHƯƠNG 2</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="hang-hoa.html">Hàng Hóa</a></li>
+                <li><a href="tien-te.html">Tiền Tệ</a></li>
+                <li><a href="dich-vu.html">Dịch Vụ</a></li>
+                <li><a href="quiz.html"class="active-nav" >Kiểm Tra</a></li>
+                <li><a href="tien-te-gallery.html">Bộ Sưu Tập Tiền Tệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Về trang chủ</a>
+            <h1>Bài Kiểm Tra Trắc Nghiệm</h1>
+            <p class="subtitle" style="color: var(--text-dark);">
+                Hãy kiểm tra xem bạn đã hiểu được bao nhiêu kiến thức ở chương này!
+            </p>
+        </div>
+    </header>
+
+    <!-- QUIZ MAIN -->
+    <main class="quiz-page-container">
+        <div class="quiz-container">
+
+            <!-- Vùng chứa các câu hỏi sẽ được JS xử lý -->
+            <div id="quiz-questions"></div>
+
+            <!-- Nút điều khiển -->
+            <div class="quiz-controls">
+                <button id="submit-quiz-btn" class="quiz-button">Nộp bài</button>
+                <button id="reset-quiz-btn" class="quiz-button reset">Làm lại</button>
+            </div>
+
+            <!-- Kết quả -->
+            <div id="quiz-result"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Website học tập môn Kinh tế Chính trị</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="js/quiz.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Marxist-Leninist_Philosophy"
+  agent-id="f3dbda3d-5cd7-4713-86a0-753b8d7d53fc"
+  language-code="vi"
+></df-messenger>
+</body>
+</html>

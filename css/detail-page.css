@@ -1,0 +1,382 @@
+/* --- HEADER TRANG CHI TIẾT --- */
+.detail-header {
+    padding: 60px 0 80px 0;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid #2a3342;
+    text-align: center;
+}
+.detail-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--text-white);
+    margin: 15px 0 0 0;
+    max-width: 800px;
+    margin: 15px auto 0;
+}
+.back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.back-link i {
+    margin-right: 8px;
+}
+
+/* --- NỘI DUNG TRANG CHI TIẾT --- */
+.detail-content {
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+.content-block {
+    margin-bottom: 80px;
+}
+.content-block h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--text-white);
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+.content-block h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+.content-block > p { /* Chỉ chọn p con trực tiếp */
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.content-block h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- HIỆU ỨNG KHI CUỘN --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- LAYOUT CỘT (2 & 3) --- */
+.two-column-layout, .three-column-layout {
+    display: grid;
+    gap: 30px;
+}
+.two-column-layout {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.three-column-layout {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.column-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--primary-color);
+    text-align: left;
+}
+.icon-box {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(56, 125, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+blockquote {
+    font-style: italic;
+    color: var(--text-dark);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 15px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+blockquote span {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+.column-card ul { list-style: none; padding-left: 0; }
+.column-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+.column-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+.callout-box {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* --- TIMELINE (Tiền tệ) --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--card-bg);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+.timeline-item {
+    padding: 10px 0 30px 60px;
+    position: relative;
+}
+.timeline-dot {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    left: 12.5px;
+    top: 15px;
+    z-index: 2;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+.timeline-content {
+    padding: 25px 30px;
+    background-color: var(--card-bg);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.timeline-content h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* --- TABS (Tiền tệ) --- */
+.tab-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.tab-buttons {
+    display: flex;
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow-x: auto; /* Cho phép cuộn ngang trên di động */
+}
+.tab-btn {
+    flex-shrink: 0; /* Ngăn co lại trên di động */
+    padding: 18px 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    transition: color 0.3s;
+    z-index: 2;
+    white-space: nowrap;
+}
+.tab-btn.active {
+    color: var(--text-white);
+}
+.tab-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0; /* Sẽ được set bằng JS */
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+.tab-content-wrapper {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.tab-content { display: none; }
+.tab-content.active {
+    display: block;
+    animation: fade-in-tab 0.5s ease;
+}
+/* 🎮 Game Section */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.draggable {
+    background-color: #fff7e6;
+    border: 2px solid #f1c232;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+.draggable:active {
+    transform: scale(1.05);
+}
+
+.dropzones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dropzone {
+    border: 3px dashed #bbb;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    min-height: 150px;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+.dropzone.dragover {
+    background-color: #e8f8e8;
+    border-color: #4CAF50;
+}
+
+.game-btn {
+    background: #f1c232;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+.game-btn:hover {
+    background: #e0ac00;
+}
+
+.game-result {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+.game-result.success {
+    color: #4CAF50;
+}
+.game-result.fail {
+    color: #d32f2f;
+}
+
+@keyframes fade-in-tab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.tab-content h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    margin-top: 0;
+}
+.tab-content ul { list-style: none; padding-left: 0; }
+.tab-content li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+.tab-content li::before {
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+/* === VIDEO SECTION === */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.video-container iframe {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+
+@media (max-width: 768px) {
+  .video-container iframe {
+    height: 280px;
+  }
+}
+
+
+/* --- Responsive cho trang chi tiết --- */
+@media (max-width: 768px) {
+    .detail-header h1 {
+        font-size: 2.2rem;
+    }
+    .two-column-layout, .three-column-layout {
+        grid-template-columns: 1fr; /* 1 cột trên di động */
+    }
+}

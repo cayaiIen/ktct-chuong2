@@ -1,0 +1,323 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 6, 2025, 7:33:31 PM
+    Author     : phung
+*/
+
+/* === Game Section === */
+.game-section {
+  text-align: center;
+  margin: 60px auto;
+  background: #fafafa;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  max-width: 900px;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.draggable {
+  padding: 10px 18px;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: grab;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.draggable:hover {
+  background: #e0f2fe;
+  border-color: #0284c7;
+}
+
+.dropzones {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.dropzone {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  border: 3px dashed #aaa;
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.dropzone:hover {
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+.game-btn {
+  margin-top: 25px;
+  padding: 12px 26px;
+  background: #0284c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.game-btn:hover {
+  background: #0369a1;
+}
+
+.game-result {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+ .memory-game-section {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #f5f7fa, #e2ecf9);
+            margin-top: 3rem;
+        }
+        .memory-game-section h2 {
+            font-family: 'Lexend', sans-serif;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+        .memory-game-section p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1rem;
+        }
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            height: 100px;
+            cursor: pointer;
+            perspective: 1000px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        .card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card.flip .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .card-front {
+            background-color: #d4af37;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .card-back {
+            background-color: white;
+            color: #333;
+            transform: rotateY(180deg);
+            font-size: 0.9rem;
+        }
+        #restart-btn {
+            padding: 10px 18px;
+            background-color: #d4af37;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #restart-btn:hover {
+            background-color: #c29e35;
+        }
+        /* ===============================
+   GAME PHÂN LOẠI HÀNG HÓA
+   =============================== */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+}
+
+.game-container h2 {
+    color: #2c3e50;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.game-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* ===== Khu vực các thẻ hàng hóa ===== */
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.item {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: grab;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: #2c3e50;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+/* ===== Khu vực đích thả (Drop Zones) ===== */
+.dropzones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.dropzone {
+    flex: 1;
+    min-width: 280px;
+    min-height: 200px;
+    border: 3px dashed #999;
+    border-radius: 20px;
+    background-color: #fafafa;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 15px;
+}
+
+.dropzone h3 {
+    color: #34495e;
+    font-family: "Lexend", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dropzone.dragover {
+    background-color: #e8f6ff;
+    border-color: #3498db;
+    transform: scale(1.02);
+}
+
+/* ===== Nút bấm ===== */
+.btn-check {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-check:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+/* ===== Kết quả ===== */
+#result {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.success {
+    color: #27ae60;
+}
+
+.fail {
+    color: #e74c3c;
+}
+
+/* ===== Hiệu ứng phản hồi ===== */
+.dropzone.correct {
+    border-color: #2ecc71;
+    background-color: #e8fff0;
+}
+
+.dropzone.incorrect {
+    border-color: #e74c3c;
+    background-color: #fff0f0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .dropzones {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropzone {
+        min-height: 150px;
+    }
+}
